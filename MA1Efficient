@@ -1,0 +1,15 @@
+//Pseudo Code
+
+OpenBoxes(N)
+    int count = 0
+    for (int i = 1; i*i <=N; i++)
+        if (i*i <= N)
+            count++
+                
+    return count
+
+main()
+    int N = 0
+    print "Enter the number of boxes:"
+    input >> N
+    print "Number of open boxes " << OpenBoxes(N)

@@ -1,0 +1,24 @@
+//Pseudo Code
+
+OpenBoxes(N)
+    int boxes[N] = {0}  //initialize all boxes to 0
+    int count = 0
+    for (int i = 1; i <=N; i++)
+        for (int j = 0; j <=N; j+=i)
+                if(boxes[j] == 0)
+                    boxes[j] = 1, count++
+                else
+                    boxes[j] = 0, count--
+                
+    return count
+
+main()
+    int N = 0
+    print "Enter the number of boxes:"
+    input >> N
+    print "Number of open boxes " << OpenBoxes(N)
+    
+                
+
+Explaination:
+To simulate the binary state of boxes: open/close, I used an int array of size N initialized at 0. The function OpenBoxes returns the Number of open boxes after N itterations by iterrating 1 - N for each itteration it loops through the ids of boxes with increments of i (the ith number of itteration) so that it only loops through ids that are multiples of i and achives O(kN) time complexity.
